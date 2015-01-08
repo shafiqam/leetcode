@@ -1,3 +1,4 @@
+// Time taken is 199ms. Passed 502 test cases on leetcode
 public class Factorial_Trailing_Zeros {
     
     public int trailingZeroes(int n) {
