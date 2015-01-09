@@ -1,4 +1,4 @@
-// Time taken is 188ms. Passed 59 test cases on leetcode
+// Time taken is 188ms. Passed 59 test cases on leetcode.
 public class Merge_Sorted_Array_Inplace {
     public void merge(int A[], int m, int B[], int n) {
         int i = m - 1;
