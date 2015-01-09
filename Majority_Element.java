@@ -1,5 +1,5 @@
 // Time taken is 246ms. Passed 40 test cases on leetcode.
-public class Solution {
+public class Majority_Element {
     public int majorityElement(int[] num) {
         
         // **Using the Moore's Voting Algorithm - 2 phases each of linear time complexity**
