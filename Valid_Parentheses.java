@@ -26,8 +26,11 @@ public class Valid_Parentheses {
             else if(hm.values().contains(ch) && !st.empty() && hm.get(st.peek()) == ch){
                 st.pop();
             }
-
-            // We ignore if there are any other characters in between the parentheses.
+            // Since the string contains only parentheses, this happens if it is any of the closing parentheses,
+            // and the stack is empty or the top of the stack is not its corresponding opening parentheses.
+            else{
+                return false;
+            }
         }
 
         // After scanning the entire string, if the stack is not empty then the string has some unclosed parentheses.
