@@ -3,6 +3,7 @@
 # @param {string[]} strs
 # @return {string}
 def encode(strs)
+  # O(1), O(1)
   result = ""
   strs.each do |str|
     result.concat "#{str.length}##{str}"
@@ -15,6 +16,7 @@ end
 # @param {string} s
 # @return {string[]}
 def decode(s)
+  # O(n), O(1)
   len = s.length
   i = 0
   result = []
