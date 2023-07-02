@@ -14,4 +14,5 @@ def two_sum(numbers, target)
       r -= 1
     end
   end
+  []
 end
