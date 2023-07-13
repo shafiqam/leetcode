@@ -8,18 +8,12 @@
 #     end
 # end
 # @param {TreeNode} root
-# @return {TreeNode}
-def invert_tree(root)
+# @return {Integer}
+def max_depth(root)
   # O(h), O(h)
-  # space usage since recursion, number of levels (height/depth) = logn
-  return nil if root.nil?
+  return 0 if root.nil?
 
-  temp = root.left
-  root.left = root.right
-  root.right = temp
-
-  invert_tree(root.left)
-  invert_tree(root.right)
-
-  return root
+  ldepth = root.left ? max_depth(root.left) : 0
+  rdepth = root.right ? max_depth(root.right) : 0
+  return (1 + [ldepth, rdepth].max)
 end
