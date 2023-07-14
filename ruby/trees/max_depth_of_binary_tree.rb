@@ -13,7 +13,7 @@ def max_depth(root)
   # O(n), O(h)
   return 0 if root.nil?
 
-  ldepth = root.left ? max_depth(root.left) : 0
-  rdepth = root.right ? max_depth(root.right) : 0
+  ldepth = max_depth(root.left)
+  rdepth = max_depth(root.right)
   return (1 + [ldepth, rdepth].max)
 end
