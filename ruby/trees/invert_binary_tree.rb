@@ -10,7 +10,7 @@
 # @param {TreeNode} root
 # @return {TreeNode}
 def invert_tree(root)
-  # O(h), O(h)
+  # O(n), O(h), h = height of tree = logn
   # space usage since recursion, number of levels (height/depth) = logn
   return nil if root.nil?
 

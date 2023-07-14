@@ -10,7 +10,7 @@
 # @param {TreeNode} root
 # @return {Integer}
 def max_depth(root)
-  # O(h), O(h)
+  # O(n), O(h)
   return 0 if root.nil?
 
   ldepth = root.left ? max_depth(root.left) : 0
