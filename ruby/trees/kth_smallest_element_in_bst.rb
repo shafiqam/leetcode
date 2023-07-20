@@ -11,7 +11,7 @@
 # @param {Integer} k
 # @return {Integer}
 def kth_smallest(root, k)
-  # O(k), O(1)
+  # O(n), O(n)
   return -1 if root.nil?
 
   # iterative traversal

@@ -16,7 +16,7 @@ def inorder_traversal(root)
   inorder(root, order)
   order
 
-  # O(n), O(1)
+  # O(n), O(n)
   # iterative solution
   order = []
   stack = []
