@@ -10,7 +10,7 @@
 # @param {TreeNode} root
 # @return {Boolean}
 def is_valid_bst(root)
-  # O(n), O(n)
+  # O(n), O(h)
   min = -Float::INFINITY
   max = Float::INFINITY
 

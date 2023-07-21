@@ -10,13 +10,13 @@
 # @param {TreeNode} root
 # @return {Integer[]}
 def preorder_traversal(root)
-  # O(n), O(n)
+  # O(n), O(h)
   # recursive solution
   order = []
   preorder(root, order)
   order
 
-  # O(n), O(n)
+  # O(n), O(h)
   # iterative solution
   return [] if root.nil?
 

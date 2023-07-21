@@ -11,7 +11,7 @@
 # @param {Integer[]} inorder
 # @return {TreeNode}
 def build_tree(preorder, inorder)
-  # O(n), O(n)
+  # O(n), O(h)
   return nil if preorder.empty? || inorder.empty?
 
   # get the first element from preorder

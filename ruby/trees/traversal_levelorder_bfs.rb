@@ -12,13 +12,13 @@
 def level_order(root)
   return [] if root.nil?
 
-  # O(n), O(n)
+  # O(n), O(h)
   # recursive solution
   order = []
   levelorder(root, order, 0)
   order
 
-  # O(n), O(n)
+  # O(n), O(h)
   # iterative solution
   order = []
   queue = [root]

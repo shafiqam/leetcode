@@ -10,13 +10,13 @@
 # @param {TreeNode} root
 # @return {Integer[]}
 def inorder_traversal(root)
-  # O(n), O(n)
+  # O(n), O(h)
   # recursive solution
   order = []
   inorder(root, order)
   order
 
-  # O(n), O(n)
+  # O(n), O(h)
   # iterative solution
   order = []
   stack = []
