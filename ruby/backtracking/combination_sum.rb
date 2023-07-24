@@ -2,7 +2,7 @@
 # @param {Integer} target
 # @return {Integer[][]}
 def combination_sum(candidates, target)
-  # O(2^t), O(1), t: target (number of elements to reach target)
+  # O(2^t), O(t), t: target (number of elements to reach target)
   result = []
 
   # use lambda to do recursion
