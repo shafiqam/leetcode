@@ -12,7 +12,7 @@ def unique_paths(m, n)
     # excluding right most row as it will all be ones
     # also to avoid edge case of going out of bounds
     (n-2).downto(0) do |c|
-      temp_row[c] = temp_row[c + 1] + row[c]
+      temp_row[c] = temp_row[c+1] + row[c]
     end
     # update row to new row
     row = temp_row
