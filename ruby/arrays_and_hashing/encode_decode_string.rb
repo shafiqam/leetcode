@@ -25,12 +25,9 @@ def decode(s)
   while i < len
     j = i
     if s[j] == '#'
-      str_len = s[i..j].to_i
-      str = ''
-      ((j + 1)...(j + str_len + 1)).each do |index|
-        str += s[j]
-      end
-      result << str
+      str_len = s[i..(j-1)].to_i
+      result << s[(j + 1)...(j + str_len + 1)]
+
       i = j + str_len + 1
     end
   end
