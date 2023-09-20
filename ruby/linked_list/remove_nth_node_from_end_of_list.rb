@@ -15,7 +15,7 @@ def remove_nth_from_end(head, n)
   prev_to_nth_node = dummy_node
   curr_node = head
 
-  # iterate nth_curr_nodenode to find the nth from beginning
+  # iterate nth_curr_node to find the nth from beginning
   while n > 0 && curr_node
     curr_node = curr_node.next
     n -= 1
