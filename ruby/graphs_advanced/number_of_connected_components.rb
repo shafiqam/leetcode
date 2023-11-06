@@ -19,7 +19,7 @@ def count_components(n, edges)
 
   # union the two nodes
   union = lambda do |n1, n2|
-    p1, p2 = find(n1), find(n2)
+    p1, p2 = find.call(n1), find.call(n2)
     return 0 if p1 == p2
 
     if rank[p1] > rank[p2]
@@ -34,7 +34,7 @@ def count_components(n, edges)
 
   count = n
   edges.each do |n1, n2|
-    count -= union(n1, n2)
+    count -= union.call(n1, n2)
   end
   count
 end
