@@ -12,7 +12,7 @@ def longest_consecutive(nums)
         len += 1
         n += 1
       end
-      longest = len if len > longest
+      longest = [longest, len].max
     end
   end
   longest

@@ -8,16 +8,14 @@ def product_except_self(nums)
   # prefix run
   pre = 1
   nums.each_with_index do |_, index|
-      arr[index] = pre
-      pre = pre * nums[index]
+    arr[index] = pre
+    pre = pre * nums[index]
   end
-  # p arr
   # postfix run
   post = 1
   (len-1).downto(0) do |index|
-      arr[index] = arr[index] * post
-      post = post * nums[index]
+    arr[index] = arr[index] * post
+    post = post * nums[index]
   end
-  # p arr
   arr
 end

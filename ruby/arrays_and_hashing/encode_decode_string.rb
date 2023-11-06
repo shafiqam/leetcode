@@ -29,6 +29,8 @@ def decode(s)
       result << s[(j + 1)...(j + str_len + 1)]
 
       i = j + str_len + 1
+    else
+      j += 1
     end
   end
   result

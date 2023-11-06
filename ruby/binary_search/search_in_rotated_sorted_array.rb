@@ -15,7 +15,7 @@ def search(nums, target)
       if target > nums[mid] || target < nums[l]
         l = mid + 1
       else
-        r = mid -1
+        r = mid - 1
       end
     # right sorted portion
     else
