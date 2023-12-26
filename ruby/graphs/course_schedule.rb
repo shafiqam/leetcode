@@ -13,7 +13,7 @@ def can_finish(num_courses, prerequisites)
 
   dfs = lambda do |crs|
     return false if visited.include?(crs) # loop exists
-    return true if pre_map[crs] == [] # no more prerequisuites
+    return true if pre_map[crs] == [] # no more prerequisites
 
     visited.add(crs)
     pre_map[crs].each do |pre|

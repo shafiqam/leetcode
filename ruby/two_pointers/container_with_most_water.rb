@@ -6,7 +6,7 @@ def max_area(height)
   largest_area = 0
   while l < r
     area = [height[l], height[r]].min * (l-r).abs
-    largest_area = area if area > largest_area
+    largest_area = [largest_area, area].max
 
     # increase those pointers that has the min height
     # if same height, increase either one is fine
