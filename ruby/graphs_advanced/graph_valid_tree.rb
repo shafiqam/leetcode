@@ -13,7 +13,7 @@ def valid_tree(n, edges)
     adj_list[y].append(x)
   end
 
-  # visited is all the edges in the current dfs path
+  # visited is all the edges in the dfs path
   visited = Set.new
 
   dfs = lambda do |i, prev|
