@@ -10,7 +10,7 @@ def word_break(s, word_dict)
   (len-1).downto(0) do |i|
     for w in word_dict
       # consider only if substring is same or of greater length than word
-      if (i + w.length) <= len && s[i..i + w.length - 1] == w
+      if (i + w.length) <= len && s[i..(i + w.length - 1)] == w
         dp[i] = dp[i + w.length]
 
         # break out of this loop if a word is found,

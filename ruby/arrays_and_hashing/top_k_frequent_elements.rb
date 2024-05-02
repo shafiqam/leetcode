@@ -24,7 +24,7 @@ def top_k_frequent(nums, k)
       top_k << x
       k -= 1
     end
-    return top_k if k == 0
+    return top_k if k == 0 ## test this
   end
   top_k
 end

@@ -12,6 +12,7 @@ def length_of_longest_substring(s)
     if hash.key? c
       # keep deleting from hash until char c (duplicate is removed)
       # we want contiguous non-repeating char substring
+      # abcbb
       hash.delete(substr.shift) while hash.key? c
     end
     substr << c

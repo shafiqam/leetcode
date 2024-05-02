@@ -25,7 +25,7 @@ class MedianFinder
     # pop from larger size heap onto smaller sized heap
     if @small.size + 1 < @large.size
       @small.push(@large.pop)
-    elsif @small.size > @large.size + 1
+    elsif @large.size + 1 < @small.size
       @large.push(@small.pop)
     end
   end
