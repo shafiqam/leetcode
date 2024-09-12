@@ -3,7 +3,7 @@
 # @return {String}
 def min_window(s, t)
   # O(s+t), O(s) + O(t)
-  return '' if t.empty?
+  return '' if t.empty? || t.length > s.length
 
   # intializing count for the need case
   count_t = Hash.new(0)

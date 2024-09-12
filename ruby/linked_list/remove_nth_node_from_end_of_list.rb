@@ -30,5 +30,5 @@ def remove_nth_from_end(head, n)
   # here update the next pointers to remove the nth node
   prev_to_nth_node.next = prev_to_nth_node.next.next
 
-  dummy_node.next
+  dummy_node.next # head of new list
 end

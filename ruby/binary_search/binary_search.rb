@@ -1,3 +1,7 @@
+=begin
+Implement a binary search. Always given a sorted array.
+=end
+
 # @param {Integer[]} nums
 # @param {Integer} target
 # @return {Integer}

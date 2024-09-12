@@ -6,11 +6,12 @@ def top_k_frequent(nums, k)
   return [] if k == 0
 
   hash = Hash.new(0)
-  max_freq = 0
+  # max_freq = 0
   nums.each do |n|
     hash[n] += 1
-    max_freq = [max_freq, hash[n]].max
+    # max_freq = [max_freq, hash[n]].max
   end
+  max_freq = hash.values.max
   # create array with count as indices
   # size of max_freq+1 to offset start with 0
   arr = Array.new(max_freq + 1) { [] }

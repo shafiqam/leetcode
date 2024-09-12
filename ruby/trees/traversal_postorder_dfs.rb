@@ -18,20 +18,20 @@ def postorder_traversal(root)
 
   # O(n), O(h)
   # iterative solution
-  return [] if root.nil?
+  # return [] if root.nil?
 
-  order = []
-  stack = [root]
-  curr = root
-  while !stack.empty?
-    curr = stack.pop
-    order << curr.val
+  # order = []
+  # stack = [root]
+  # curr = root
+  # while !stack.empty?
+  #   curr = stack.pop
+  #   order << curr.val
 
-    # add to stack the one that needs to be processed later
-    stack << curr.left if curr.left
-    stack << curr.right if curr.right
-  end
-  order.reverse
+  #   # add to stack the one that needs to be processed later
+  #   stack << curr.left if curr.left
+  #   stack << curr.right if curr.right
+  # end
+  # order.reverse
 end
 
 def postorder(root, order)

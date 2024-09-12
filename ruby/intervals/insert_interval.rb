@@ -19,7 +19,7 @@ def insert(intervals, new_interval)
     end
   end
 
-  # through the loop, we neever added the overlapping interval, doing that here
+  # through the loop, we never added the overlapping interval, doing that here
   result << new_interval
   result
 end

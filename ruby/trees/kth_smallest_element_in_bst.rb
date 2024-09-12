@@ -14,7 +14,7 @@ def kth_smallest(root, k)
   # O(n), O(n)
   return -1 if root.nil?
 
-  # iterative traversal
+  # iterative inorder traversal
   count = 0
   stack = []
   curr = root

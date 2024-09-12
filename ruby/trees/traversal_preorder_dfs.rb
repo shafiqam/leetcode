@@ -18,20 +18,20 @@ def preorder_traversal(root)
 
   # O(n), O(h)
   # iterative solution
-  return [] if root.nil?
+  # return [] if root.nil?
 
-  order = []
-  stack = [root]
-  curr = root
-  while !stack.empty?
-    curr = stack.pop
-    order << curr.val
+  # order = []
+  # stack = [root]
+  # curr = root
+  # while !stack.empty?
+  #   curr = stack.pop
+  #   order << curr.val
 
-    # add to stack the one that needs to be processed later
-    stack << curr.right if curr.right
-    stack << curr.left if curr.left
-  end
-  order
+  #   # add to stack the one that needs to be processed later
+  #   stack << curr.right if curr.right
+  #   stack << curr.left if curr.left
+  # end
+  # order
 end
 
 def preorder(root, order)

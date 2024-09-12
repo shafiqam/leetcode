@@ -10,7 +10,7 @@ def is_anagram(s, t)
 
   # hashmap, count the chars, O(s+t), O(s+t)
   hash = Hash.new(0)
-  s.chars.each.with_index do |_, index|
+  s.chars.each_with_index do |_, index|
     hash[s[index]] += 1
     hash[t[index]] -= 1
   end

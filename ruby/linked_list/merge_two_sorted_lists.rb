@@ -27,5 +27,5 @@ def merge_two_lists(list1, list2)
   # append to current_node if any one list has more values
   curr_node.next = list1 ? list1 : list2
 
-  dummy_node.next
+  dummy_node.next # head of new list
 end

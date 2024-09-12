@@ -18,22 +18,22 @@ def inorder_traversal(root)
 
   # O(n), O(h)
   # iterative solution
-  order = []
-  stack = []
-  curr = root
-  while true
-    if curr
-      stack << curr
-      curr = curr.left
-    else
-      break if stack.empty?
+  # order = []
+  # stack = []
+  # curr = root
+  # while true
+  #   if curr
+  #     stack << curr
+  #     curr = curr.left
+  #   else
+  #     break if stack.empty?
 
-      curr = stack.pop
-      order << curr.val
-      curr = curr.right
-    end
-  end
-  order
+  #     curr = stack.pop
+  #     order << curr.val
+  #     curr = curr.right
+  #   end
+  # end
+  # order
 end
 
 def inorder(root, order)

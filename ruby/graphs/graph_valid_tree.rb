@@ -20,7 +20,9 @@ def valid_tree(n, edges)
     return false if visited.include?(i) # loop exists
 
     visited.add(i)
-    adj_list.each do |j|
+
+    # iterate through every neighbor of i
+    adj_list[i].each do |j|
       next if j == prev # skip the false positive, since undirected graph
       return false unless dfs.call(j, i)
     end

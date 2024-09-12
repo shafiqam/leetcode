@@ -3,7 +3,7 @@
 def merge(intervals)
   # O(nlogn), O(1)
   intervals = intervals.sort_by { |i| i[0] }
-  # intervals.sort! # 2D arrays can be sorted as ssuch too
+  # intervals.sort! # 2D arrays can be sorted as such too
 
   result = [intervals[0]]
   for i in intervals[1..intervals.length-1]

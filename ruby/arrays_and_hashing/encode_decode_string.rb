@@ -17,12 +17,11 @@ end
 # @return {string[]}
 def decode(s)
   # O(n), O(1)
-  len = s.length
   i = 0
   result = []
   # ['cat', 'rats']
   # 3#cat4#rats
-  while i < len
+  while i < s.length
     j = i
     if s[j] == '#'
       str_len = s[i..(j-1)].to_i

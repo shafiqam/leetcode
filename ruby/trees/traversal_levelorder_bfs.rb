@@ -20,24 +20,24 @@ def level_order(root)
 
   # O(n), O(h)
   # iterative solution
-  order = []
-  queue = [root]
-  while !queue.empty?
-    len = queue.length
-    level = []
+  # order = []
+  # queue = [root]
+  # while !queue.empty?
+  #   len = queue.length
+  #   level = []
 
-    # get length of queue at start to determine how many nodes in current level
-    # shift queue until all level nodes are retrieved and add their children onto the queue
-    while len > 0
-      curr = queue.shift
-      level << curr.val
-      queue << curr.left if curr.left
-      queue << curr.right if curr.right
-      len -= 1
-    end
-    order << level
-  end
-  order
+  #   # get length of queue at start to determine how many nodes in current level
+  #   # shift queue until all level nodes are retrieved and add their children onto the queue
+  #   while len > 0
+  #     curr = queue.shift
+  #     level << curr.val
+  #     queue << curr.left if curr.left
+  #     queue << curr.right if curr.right
+  #     len -= 1
+  #   end
+  #   order << level
+  # end
+  # order
 end
 
 def levelorder(root, order, level)
