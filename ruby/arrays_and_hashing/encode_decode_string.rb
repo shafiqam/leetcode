@@ -1,3 +1,14 @@
+=begin
+https://leetcode.com/problems/encode-and-decode-strings/description/
+Design an algorithm to encode a list of strings to a single string. The encoded
+string is then decoded back to the original list of strings. Please implement
+encode and decode methods.
+Input: ["neet","code","love","you"]
+Output:["neet","code","love","you"]
+Input: ["we","say",":","yes"]
+Output: ["we","say",":","yes"]
+=end
+
 # Encodes a list of strings to a single string.
 #
 # @param {string[]} strs
@@ -25,9 +36,9 @@ def decode(s)
     j = i
     if s[j] == '#'
       str_len = s[i..(j-1)].to_i
-      result << s[(j + 1)...(j + str_len + 1)]
+      result << s[(j + 1)...((j + 1) + str_len)]
 
-      i = j + str_len + 1
+      i = (j + 1) + str_len
     else
       j += 1
     end
