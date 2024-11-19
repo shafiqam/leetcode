@@ -1,7 +1,7 @@
 # @param {Integer[]} stones
 # @return {Integer}
 def last_stone_weight(stones)
-  # O(nlogn), O(1)
+  # O(nlogn), O(n)
   heap = MaxHeap.new(stones)
 
   # find diff as long as there are atleast 2 elements in heap

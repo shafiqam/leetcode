@@ -16,7 +16,7 @@ Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
 def max_sub_array(nums)
   # O(n), O(1)
   curr_sum = 0
-  max_sum = nums[0]
+  max_sum = nums[0] # -Float::Infinity case
 
   nums.each do |n|
     # sum upto the previous point is negative, ignore it

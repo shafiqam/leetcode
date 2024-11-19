@@ -14,7 +14,7 @@ def max_path_sum(root)
   # if single element, then return root value
   return root.val if root.left.nil? && root.right.nil?
 
-  path_sum, max_sum = dfs_helper(root)
+  _, max_sum = dfs_helper(root)
   max_sum
 end
 

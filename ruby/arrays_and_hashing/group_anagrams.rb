@@ -16,8 +16,8 @@ Output: [["a"]]
 # @param {String[]} strs
 # @return {String[][]}
 def group_anagrams(strs)
-  # O(m.n.26) ~ O(m.n), O(m) + O(n)
-  # m -> length of input strs[], n -> max length of each str
+  # O(m.n.26) ~ O(m.n), O(n)
+  # m -> number of strs (strs.length), n -> length of biggest str
   anagrams = Hash.new { |h,k| h[k] = [] }
   strs.each do |str|
     hash = Hash.new(0)

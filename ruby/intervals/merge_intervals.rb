@@ -1,7 +1,7 @@
 # @param {Integer[][]} intervals
 # @return {Integer[][]}
 def merge(intervals)
-  # O(nlogn), O(1)
+  # O(nlogn), O(n)
   intervals = intervals.sort_by { |i| i[0] }
   # intervals.sort! # 2D arrays can be sorted as such too
 

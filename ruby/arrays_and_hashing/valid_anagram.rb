@@ -17,7 +17,7 @@ def is_anagram(s, t)
   # sorted_t = t.chars.sort.join
   # return sorted_s == sorted_t
 
-  # O(s+t), O(s+t) ~ O(n), O(n)
+  # O(s), O((s+t) ~ 26) ~ O(n), O(1)
   # hashmap, count the chars
   hash = Hash.new(0)
   s.chars.each_with_index do |_, index|

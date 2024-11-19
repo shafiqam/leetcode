@@ -27,11 +27,9 @@ def length_of_longest_substring(s)
     # keep deleting from hash until char c (duplicate is removed)
     # we want contiguous non-repeating char substring
     # eg; abcbb
-    if hash.key? c
-      while hash.key? c
-        hash.delete(s[l])
-        l += 1
-      end
+    while hash.key? c
+      hash.delete(s[l])
+      l += 1
     end
     hash[c] = true
     longest = [longest, (r - l + 1)].max

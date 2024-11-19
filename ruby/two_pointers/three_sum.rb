@@ -28,14 +28,13 @@ def three_sum(nums)
 
   # traverse arr, and find all tuples for a current number and move forward finding others
   result = []
-  len = nums.length
   nums.each_with_index do |n, index|
     # skip if previous value is same as current
     # make sure do this after first element or it compares to last element (-1 index)
     next if index > 0 && n == nums[index - 1]
     target = -1 * n # all triplets must map to 0
 
-    l, r = index + 1, len - 1
+    l, r = index + 1, nums.length - 1
     while l < r
       if nums[l] + nums[r] == target
         result << [n, nums[l], nums[r]]

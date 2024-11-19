@@ -14,10 +14,10 @@ Output: ["we","say",":","yes"]
 # @param {string[]} strs
 # @return {string}
 def encode(strs)
-  # O(1), O(1)
+  # O(n), O(1)
   result = ""
   strs.each do |str|
-    result.concat "#{str.length}##{str}"
+    result += "#{str.length}##{str}"
   end
   result
 end
@@ -28,19 +28,19 @@ end
 # @return {string[]}
 def decode(s)
   # O(n), O(1)
-  i = 0
+  l, r = 0, 0
   result = []
   # ['cat', 'rats']
   # 3#cat4#rats
-  while i < s.length
-    j = i
-    if s[j] == '#'
-      str_len = s[i..(j-1)].to_i
-      result << s[(j + 1)...((j + 1) + str_len)]
-
-      i = (j + 1) + str_len
+  while r < s.length
+    if s[r] == '#'
+      len = s[l...r].to_i
+      str = s[(r + 1)...((r + 1) + len)]
+      l = (r + 1) + len
+      r = l
+      result << str
     else
-      j += 1
+      r += 1
     end
   end
   result

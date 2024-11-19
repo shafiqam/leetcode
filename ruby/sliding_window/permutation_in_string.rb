@@ -22,43 +22,43 @@ def check_inclusion(s1, s2)
   # update count of chars in each s1 and s2 respectively until s1 length
   index = 0
   while index < s1.length
-      s1_count[s1[index]] += 1
-      s2_count[s2[index]] += 1
-      index += 1
+    s1_count[s1[index]] += 1
+    s2_count[s2[index]] += 1
+    index += 1
   end
 
-  # count all chars in s1  that match with s2
+  # count all chars in s1 that match with s2
   matches = 0
   ('a'..'z').to_a.each do |char|
-      matches += 1 if s1_count[char] == s2_count[char]
+    matches += 1 if s1_count[char] == s2_count[char]
   end
 
   # check the remaining s2 until we find all 26 matches
   # ie, search for window which is a permutation of s1 (keeping same window size)
   l, r = 0, s1.length # current window size, slide it from here, searching for matches
   while r < s2.length
-      # if reached required matches
-      return true if matches == 26
+    # if reached required matches
+    return true if matches == 26
 
-      # add a char on the right
-      char = s2[r]
-      s2_count[char] += 1
-      if s1_count[char] == s2_count[char] # find a match
-          matches += 1
-      elsif s1_count[char] + 1 == s2_count[char] # find a mismatch
-          matches -= 1
-      end
-      r += 1
+    # add a char on the right
+    char = s2[r]
+    s2_count[char] += 1
+    if s1_count[char] == s2_count[char] # find a match
+        matches += 1
+    elsif s1_count[char] + 1 == s2_count[char] # find a mismatch
+        matches -= 1
+    end
+    r += 1
 
-      # remove a char on the left
-      char = s2[l]
-      s2_count[char] -= 1
-      if s1_count[char] == s2_count[char] # find a match
-          matches += 1
-      elsif s1_count[char] - 1 == s2_count[char] # find a mismatch
-          matches -= 1
-      end
-      l += 1
+    # remove a char on the left
+    char = s2[l]
+    s2_count[char] -= 1
+    if s1_count[char] == s2_count[char] # find a match
+        matches += 1
+    elsif s1_count[char] - 1 == s2_count[char] # find a mismatch
+        matches -= 1
+    end
+    l += 1
   end
   matches == 26 # true if all char count match
 end

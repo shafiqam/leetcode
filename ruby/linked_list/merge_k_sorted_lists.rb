@@ -10,6 +10,7 @@
 # @return {ListNode}
 def merge_k_lists(lists)
   # O(nlogk), O(n)
+  # n is the num of merges, k is the num of lists
   return nil if lists.empty?
 
   # loop till you only have one list left

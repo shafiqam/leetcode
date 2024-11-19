@@ -1,29 +1,29 @@
 class MinHeap
-def initialize()
-  @data = []
-end
+  def initialize()
+    @data = []
+  end
 
-def push(val)
-  @data.push(val)
-  parent_index = parent(@data.length-1)
-  sift_up(parent_index)
-end
+  def push(val)
+    @data.push(val)
+    parent_index = parent(@data.length-1)
+    sift_up(parent_index)
+  end
 
-def pop
-  return nil if @data.length == 0
+  def pop
+    return nil if @data.length == 0
 
-  smallest_value = @data[0]
-  @data[0] = @data.pop
-  sift_down(0)
+    smallest_value = @data[0]
+    @data[0] = @data.pop # pop the last one and add it to the top-most place
+    sift_down(0)
 
-  smallest_value
-end
+    smallest_value
+  end
 
-def peak
-  @data[0]
-end
+  def peak
+    @data[0]
+  end
 
-private
+  private
 
   def left(i)
     2 * i + 1
@@ -41,6 +41,7 @@ private
     l = left(i)
     r = right(i)
 
+    # compare i with each parent, let and right positions and assign head to lowest
     head = i
     head = l if @data[l] && @data[l] < @data[head]
     head = r if @data[r] && @data[r] < @data[head]

@@ -58,6 +58,6 @@ def min_window(s, t)
 
     r += 1
   end
-  l, r = result[0], result[1]
+  l, r = result
   (result_len != s.length + 1) ? s[l..r] : ''
 end

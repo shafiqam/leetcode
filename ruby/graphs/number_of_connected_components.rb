@@ -3,7 +3,7 @@
 # @return: the number of connected components
 def count_components(n, edges)
   # O(logn), O(n)
-  parent = (0..n-1).to_a
+  par = (0..n-1).to_a
   rank = Array.new(n) { 1 }
 
   # find the node n1's root parent
