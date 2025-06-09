@@ -7,7 +7,7 @@ class KthLargest
   :type nums: Integer[]
 =end
   def initialize(k, nums)
-    # O((n-k)logn) ~ O(nlogn), O(k)
+    # O((n-k)logn) ~ O(nlogk), O(k)
     @heap = MinHeap.new([])
     @k = k
     nums.each do |n|

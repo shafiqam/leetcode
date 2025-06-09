@@ -10,7 +10,7 @@
 # @param {TreeNode} root
 # @return {Integer}
 def max_path_sum(root)
-  # O(n), O(h)
+  # O(n), O(n)
   # if single element, then return root value
   return root.val if root.left.nil? && root.right.nil?
 

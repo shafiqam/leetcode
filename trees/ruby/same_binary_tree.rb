@@ -11,7 +11,7 @@
 # @param {TreeNode} q
 # @return {Boolean}
 def is_same_tree(p, q)
-  # O(p+q), O(log[p,q].min) ~ O(h(p or q))
+  # O(p+q), O([logp,logq].min) ~ O(h(p or q))
   if p.nil? && q.nil?
     true
   elsif p && q

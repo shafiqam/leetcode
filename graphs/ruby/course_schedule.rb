@@ -2,7 +2,7 @@
 # @param {Integer[][]} prerequisites
 # @return {Boolean}
 def can_finish(num_courses, prerequisites)
-  # O(n + pre), O(n)
+  # O(n + pre), O(n + pre)
   pre_map = Hash.new { |h,k| h[k] = [] }
   prerequisites.each do |crs, pre|
     pre_map[crs].append(pre)
